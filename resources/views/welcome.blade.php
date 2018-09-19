@@ -14,7 +14,11 @@
                 <div class="row">
                     <div class="col-md-8">
                         <h1 class="white-text">Tienda en linea</h1>
-                        <p class="lead white-text">Encuentra los mejores productos en nuestra tienda virtual.</p>
+                        @guest
+                            <p class="lead white-text">Encuentra los mejores productos en nuestra tienda virtual.</p>
+                        @else
+                            <p class="lead white-text">Bienvenido {{ Auth::user()->name }}, encuentra los mejores productos en nuestra tienda virtual.</p>
+                        @endguest
                         <a class="main-button icon-button" href="#">Quiero comprar!</a>
                     </div>
                 </div>

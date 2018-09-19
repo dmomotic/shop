@@ -15,3 +15,7 @@ Route::get('/', function () {
 	$product = App\Product::find(1);
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

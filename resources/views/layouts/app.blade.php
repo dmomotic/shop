@@ -58,6 +58,23 @@
 						<li><a href="#">Courses</a></li>
 						<li><a href="blog.html">Blog</a></li>
 						<li><a href="contact.html">Contact</a></li>
+						@guest
+			              <li class="nav-item">
+			                <a class="nav-link js-scroll-trigger" href="{{ route('login') }}">Iniciar Sesion</a>
+			              </li>
+			            @else
+			            	<li class="nav-item">
+				                <a class="nav-link js-scroll-trigger white-text" href="{{ route('logout') }}"
+			                          onclick="event.preventDefault();
+			                                   document.getElementById('logout-form').submit();">
+			                          Cerrar Sesion
+			                      </a>
+
+			                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+			                          {{ csrf_field() }}
+			                      </form>
+				              </li>
+			            @endguest
 					</ul>
 				</nav>
 				<!-- /Navigation -->
@@ -121,7 +138,7 @@
 					<!-- copyright -->
 					<div class="col-md-8 col-md-pull-4">
 						<div class="footer-copyright">
-							<span>&copy; Copyright 2018. All Rights Reserved. | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com">Colorlib</a></span>
+							<span>&copy; Analisis y diseño de sistemas 1</span>
 						</div>
 					</div>
 					<!-- /copyright -->
