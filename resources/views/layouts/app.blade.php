@@ -37,8 +37,8 @@
 				<div class="navbar-header">
 					<!-- Logo -->
 					<div class="navbar-brand">
-						<a class="logo" href="index.html">
-							<img src="./img/logo-alt.png" alt="logo">
+						<a class="logo" href="{{ url('/') }}">
+							<img src="{{ asset('/img/logo-alt.png') }}" alt="logo">
 						</a>
 					</div>
 					<!-- /Logo -->
