@@ -12,13 +12,13 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
 
 		<!-- Bootstrap -->
-		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link type="text/css" rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
 
 		<!-- Font Awesome Icon -->
-		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
 
 		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<link type="text/css" rel="stylesheet" href="{{ asset('css/style.css') }}"/>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,7 +38,7 @@
 					<!-- Logo -->
 					<div class="navbar-brand">
 						<a class="logo" href="index.html">
-							<img src="./img/logo-alt.png" alt="logo">
+							<img src="{{ asset('img/logo-alt.png') }}" alt="logo">
 						</a>
 					</div>
 					<!-- /Logo -->
@@ -58,6 +58,7 @@
 						<li><a href="#">Courses</a></li>
 						<li><a href="blog.html">Blog</a></li>
 						<li><a href="contact.html">Contact</a></li>
+
 					</ul>
 				</nav>
 				<!-- /Navigation -->
@@ -81,7 +82,7 @@
 					<div class="col-md-6">
 						<div class="footer-logo">
 							<a class="logo" href="index.html">
-								<img src="./img/logo.png" alt="logo">
+								<img src="{{ asset('img/logo-alt.png') }}" alt="logo">
 							</a>
 						</div>
 					</div>
@@ -121,7 +122,7 @@
 					<!-- copyright -->
 					<div class="col-md-8 col-md-pull-4">
 						<div class="footer-copyright">
-							<span>&copy; Copyright 2018. All Rights Reserved. | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com">Colorlib</a></span>
+							<span>&copy; Analisis y diseño de sistemas 1</span>
 						</div>
 					</div>
 					<!-- /copyright -->
@@ -141,9 +142,9 @@
 
 
 		<!-- jQuery Plugins -->
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
 
 	</body>
 </html>

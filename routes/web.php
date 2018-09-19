@@ -15,3 +15,8 @@ Route::get('/', function () {
 	$product = App\Product::find(1);
     return view('welcome');
 });
+
+
+
+//Ruta vista de producto
+Route::get('/ProductView/{id}', 'Product_View_Controller@show');
