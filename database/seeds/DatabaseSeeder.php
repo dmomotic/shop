@@ -11,6 +11,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        //Insercion de 20 clientes
+		factory(App\User::class, 1)->create([
+			'email' => 'customer1@mail.com',
+    	]);
+    	factory(App\User::class, 19)->create();
+
+        //Insercion de 30 productos
+    	factory(App\Product::class, 30)->create();
+
+        //Insertando 20 compras
+        factory(App\Purchase::class, 20)->create();
     }
 }

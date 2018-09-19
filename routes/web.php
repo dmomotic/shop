@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
+	$product = App\Product::find(1);
     return view('welcome');
 });
