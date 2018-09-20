@@ -24,14 +24,16 @@
                 <form method="post" action="{{ url('/compraproducto') }}">
 
                 <img src="{{ $product->image }}">
-	              <h3 class="mb-3">{{ $product->name }}</h3>
+                  <h3 class="mb-3">{{ $product->name }}</h3>
+                      ID Producto <input class="text-muted mb-0" placeholder="{{ $product->id }}" name="product_id" disabled>
                       <p class="text-muted mb-0">{{ $product->description }}</p>
                       
-                      <input class="text-muted mb-0" placeholder="{{ $product->price }}" name="product_price">
-                      <input class="text-muted mb-0" placeholder="{{ $product->id }}" name="product_id">
-                      <input class="text-muted mb-0" placeholder="1" name="product_cant">
+                      <p> Precio Q <input class="text-muted mb-0" placeholder="{{ $product->price }}" name="product_price" disabled> </p>   
+                      <p> Cantidad <input class="text-muted mb-0" placeholder="{{ $cantidad }}" name="product_cant" disabled> </p>
+                      <p> Confirmar ID usuario <input class="text-muted mb-0"  name="user_id" required autofocus> </p> 
 	              </a>
-	            </div>
+                </div>
+                <input class="btn btn-light btn-xl" type="submit" value="¡Comprar!">
 	          </div>
           	@endif
           @empty
@@ -43,7 +45,7 @@
 	            </div>
 	          </div>
           @endforelse
-          <input class="btn btn-light btn-xl" type="submit" value="¡Comprar!">
+          
         </div>
       </div>
     </section>
