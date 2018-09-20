@@ -37,8 +37,8 @@
 				<div class="navbar-header">
 					<!-- Logo -->
 					<div class="navbar-brand">
-						<a class="logo" href="index.html">
-							<img src="./img/logo-alt.png" alt="logo">
+						<a class="logo" href="{{ url('/') }}">
+							<img src="{{ asset('/img/logo-alt.png') }}" alt="logo">
 						</a>
 					</div>
 					<!-- /Logo -->
@@ -58,6 +58,7 @@
 						<li><a href="#">Courses</a></li>
 						<li><a href="blog.html">Blog</a></li>
 						<li><a href="contact.html">Contact</a></li>
+
 						@guest
 			              <li class="nav-item">
 			                <a class="nav-link js-scroll-trigger" href="{{ route('login') }}">Iniciar Sesion</a>
@@ -75,6 +76,7 @@
 			                      </form>
 				              </li>
 			            @endguest
+
 					</ul>
 				</nav>
 				<!-- /Navigation -->
@@ -98,7 +100,7 @@
 					<div class="col-md-6">
 						<div class="footer-logo">
 							<a class="logo" href="index.html">
-								<img src="./img/logo.png" alt="logo">
+								<img src="{{ asset('img/logo-alt.png') }}" alt="logo">
 							</a>
 						</div>
 					</div>
