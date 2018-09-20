@@ -21,8 +21,7 @@ class Product_View_Controller extends Controller
         $producto = DB::table('products')
             ->select('name','price','quantity','description','image')
             ->where('id','=', $id)->get();
-        //dd($producto);
-        //dd($producto->image);
+
         return view('/product_view')->with(compact('producto'));
 
     }
