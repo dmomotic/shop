@@ -4,7 +4,39 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style> 
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 20px solid #ccc;
+    border-radius: 4px;
+    font-size: 20px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    color:orange;
+}
+
+input[type=text]:focus {
+    width: 140%;
+}
+
+::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+
+
+</style>
+		
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		
 
 		<title>@yield('title')</title>
 
@@ -63,6 +95,10 @@
 			              <li class="nav-item">
 			                <a class="nav-link js-scroll-trigger" href="{{ route('login') }}">Iniciar Sesion</a>
 			              </li>
+			              <br>
+			             @yield('searchbar')
+			              
+		    			
 			            @else
 			            	<li class="nav-item">
 				                <a class="nav-link js-scroll-trigger white-text" href="{{ route('logout') }}"
@@ -75,14 +111,22 @@
 			                          {{ csrf_field() }}
 			                      </form>
 				              </li>
+				          <br>
+			               @yield('searchbar')
 			            @endguest
 
 					</ul>
+					
 				</nav>
+				
+				
+
 				<!-- /Navigation -->
 
 			</div>
+			
 		</header>
+
 		<!-- /Header -->
 
 		@yield('content')

@@ -27,6 +27,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+
 Route::get('/compra', function () {
     return view('Compra');
 });
@@ -38,3 +39,4 @@ Route::post('/compraproducto', 'purchasesController@SavePurchase');
 
 Route::get('/Dash', 'ClientController@eva');
 
+Route::get('/search', 'ControllerForSearching@showResults');

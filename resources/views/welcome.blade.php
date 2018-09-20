@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@section('searchbar')
+
+@include('blocks.searchbar')
+
+@endsection
+
 @section('content')
 
     <!-- Home -->
