@@ -13,8 +13,39 @@ class searchTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testSearch()
     {
-        $this->assertTrue(true);
+    	$response = $this->call('GET', '/', ['product_name' => 'a']);
+      	$this->assertEquals(200, $response->status());
+    }
+
+     /**
+     * A basic test example.
+     * @test
+     * @return void
+     */
+    public function require_name()
+    {
+        $this->from('/')
+            ->get('/search', [
+                'product_name' => '',
+            ])
+            ->assertRedirect('/')
+            ->assertSessionHasErrors(['product_name']);
+    }
+
+    /**
+     * A basic test example.
+     * @test
+     * @return void
+     */
+    public function test_for_no_results()
+    {
+        $response = $this->json('GET', '/search', ['product_name' => 'asdfg']);
+        $response->assertViewIs('search.showp');
+        $response->assertSee('Sin resultados');
+        $response->assertSee('Resultados de busqueda');
+        $response->assertDontSee('asdfg');
+        $response->assertSuccessful();
     }
 }
