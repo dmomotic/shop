@@ -26,3 +26,5 @@ Route::get('/compra', function () {
     return view('Compra');
 });
 
+Route::get('/Dash', 'ClientController@eva');
+
