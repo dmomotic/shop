@@ -26,3 +26,7 @@ Route::get('/compra', function () {
     return view('Compra');
 });
 
+Route::get('/compraproducto', 'purchasesController@ObtenerProducto');
+
+Route::post('/compraproducto', 'purchasesController@ComprarProducto');
+
