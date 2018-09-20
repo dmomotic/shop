@@ -31,7 +31,10 @@ Route::get('/compra', function () {
     return view('Compra');
 });
 
+
 Route::get('/compraproducto', 'purchasesController@ObtenerProducto');
 
 Route::post('/compraproducto', 'purchasesController@ComprarProducto');
+
+Route::get('/Dash', 'ClientController@eva');
 
