@@ -95,12 +95,8 @@ input[type=text]:focus {
 			                <a class="nav-link js-scroll-trigger" href="{{ route('login') }}">Iniciar Sesion</a>
 			              </li>
 			              <br>
-			             
-			              <div class="col-xs-6">
-			              <form>
-  						  <input type="text" name="search" placeholder="Buscar producto...">
-		    			  </form>
-		    			</div>
+			             @yield('searchbar')
+			              
 		    			
 			            @else
 			            	<li class="nav-item">
@@ -115,10 +111,7 @@ input[type=text]:focus {
 			                      </form>
 				              </li>
 				          <br>
-			              <div class="col-xs-6">
-			              <form>
-  						  <input type="text" name="search" placeholder="Buscar producto...">
-		    			  </form>
+			               @yield('searchbar')
 			            @endguest
 					</ul>
 					
