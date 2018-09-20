@@ -34,7 +34,7 @@ Route::get('/compra', function () {
 
 Route::get('/compraproducto', 'purchasesController@ObtenerProducto');
 
-Route::post('/compraproducto', 'purchasesController@ComprarProducto');
+Route::post('/compraproducto', 'purchasesController@SavePurchase');
 
 Route::get('/Dash', 'ClientController@eva');
 

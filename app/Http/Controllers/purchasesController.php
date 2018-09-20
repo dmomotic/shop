@@ -8,24 +8,33 @@ use App\Purchase;
 
 class purchasesController extends Controller
 {
+    /**
+    * @param \Illuminate\Http\Request $request
+    * @return \Illuminate\Http\Response
+    */
+    public function ReviewPurchase(){
+        return view('Purchse');
+    }
+
+    /**
+    * @param \Illuminate\Http\Request $request
+    * @return \Illuminate\Http\Response
+    */
+    public function SavePurchase(Request $request){
+        $r = new Purchase();
+        $r->user_id = $request->input('id1');
+        $r->product_id = $request->input('id');
+        $r->quantity= $request->input('cantidad');
+        $r->payment= $request->input('precio');
+        $r->save();
+        return back();
+    }
+
     public function ObtenerProducto(Request $request){
         $producto = $request->input('product_code');
         $cantidad = $request->input('product_cant');
     	$products = product::where('id', '=', $producto)->get();
     	return view('CompraProducto')->with(compact('products','cantidad'));
     	
-    }
-    /**
-    * @param \Illuminate\Http\Request $request
-    * @return \Illuminate\Http\Response
-    */
-    public function ComprarProducto(Request $request){
-        $r = new Purchase();
-        $r->user_id = $request->input('user_id');
-        $r->product_id = $request->input('product_id');
-        $r->quantity= $request->input('product_cant');
-        $r->payment= $request->input('product_price');
-        $r->save();
-        return back();
     }
 }
