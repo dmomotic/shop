@@ -37,8 +37,8 @@
 				<div class="navbar-header">
 					<!-- Logo -->
 					<div class="navbar-brand">
-						<a class="logo" href="index.html">
-							<img src="{{ asset('img/logo-alt.png') }}" alt="logo">
+						<a class="logo" href="{{ url('/') }}">
+							<img src="{{ asset('/img/logo-alt.png') }}" alt="logo">
 						</a>
 					</div>
 					<!-- /Logo -->
@@ -58,6 +58,24 @@
 						<li><a href="#">Courses</a></li>
 						<li><a href="blog.html">Blog</a></li>
 						<li><a href="contact.html">Contact</a></li>
+
+						@guest
+			              <li class="nav-item">
+			                <a class="nav-link js-scroll-trigger" href="{{ route('login') }}">Iniciar Sesion</a>
+			              </li>
+			            @else
+			            	<li class="nav-item">
+				                <a class="nav-link js-scroll-trigger white-text" href="{{ route('logout') }}"
+			                          onclick="event.preventDefault();
+			                                   document.getElementById('logout-form').submit();">
+			                          Cerrar Sesion
+			                      </a>
+
+			                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+			                          {{ csrf_field() }}
+			                      </form>
+				              </li>
+			            @endguest
 
 					</ul>
 				</nav>

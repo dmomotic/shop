@@ -18,5 +18,16 @@ Route::get('/', function () {
 
 
 
+
 //Ruta vista de producto
 Route::get('/ProductView/{id}', 'Product_View_Controller@show');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/compra', function () {
+    return view('Compra');
+});
+
