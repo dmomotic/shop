@@ -27,17 +27,6 @@
             <div class="service-box mt-5 mx-auto">
               
               <a href="#search">
-                <i class="fa fa-book fa-5x fa-lg"></i>
-                <br>
-                <br>
-                <p class="text-muted mb-0">Ver Productos </p>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4 text-center">
-            <div class="service-box mt-5 mx-auto">
-              
-              <a href="#search">
                 <i class="fa fa-search fa-5x fa-lg"></i>
                 <br>
                 <br>
