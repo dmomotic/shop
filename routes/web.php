@@ -17,8 +17,6 @@ Route::get('/', function () {
 });
 
 
-
-
 //Ruta vista de producto
 Route::get('/ProductView/{id}', 'Product_View_Controller@show');
 

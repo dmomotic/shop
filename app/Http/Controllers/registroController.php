@@ -36,7 +36,7 @@ class registroController extends Controller
             $r->updated_at="2018-08-15 23:35:55";
             $r->created_at="2018-08-15 23:35:55";
             $r->save();
-         return view('compra');
+         return view('/historialDeCompras');
     }
 
 

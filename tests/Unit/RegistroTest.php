@@ -33,7 +33,7 @@ class RegistroTest extends TestCase
     /**
      * A basic test example.
      * @test
-     * @return void
+     * @return view
      */
     public function pruebaMetodoSaveData()
     {
@@ -46,8 +46,8 @@ class RegistroTest extends TestCase
         ]);
 	   $this->assertDatabaseHas('users', ['name' => 'jossie','email' => 'prueba@correo.com','password' => 'hola','card' => '12345678']);
 
-	   
+	
     }
-
+ 
 
 }
