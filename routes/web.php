@@ -22,6 +22,11 @@ Route::get('/', function () {
 //Ruta vista de producto
 Route::get('/ProductView/{id}', 'Product_View_Controller@show');
 
+Route::get('/registro', 'registroController@registr');
+Route::post('/registro', 'registroController@saveData');
+
+Route::get('/historial', 'registroController@historico');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

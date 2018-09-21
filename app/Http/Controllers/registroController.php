@@ -1,14 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
-
+namespace App\Http\Controllers;
 use App\User;
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class RegisterController extends Controller
+class registroController extends Controller
 {
 
 	/**
@@ -17,7 +14,7 @@ class RegisterController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function registro()
+    public function registr()
     {
         return view('/registro');
     }
@@ -39,6 +36,29 @@ class RegisterController extends Controller
             $r->updated_at="2018-08-15 23:35:55";
             $r->created_at="2018-08-15 23:35:55";
             $r->save();
-        return back();
+         return view('/registro');
+    }
+
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function historico(Request $request){
+        $escuela = $request->input('1');
+        $consulta = \DB::table('purchases as r')
+        ->join('users as u','r.user_id','=','u.id')
+        ->join('products as t', 'r.product_id', '=', 't.id')
+        ->select('t.name as NAME','t.quantity as CANTIDAD')
+        ->where('r.user_id','=',$escuela)
+        ->get();
+
+
+            return view('/historialDeCompras', [
+            'consulta' => $consulta
+            ]);
+        
     }
 }
