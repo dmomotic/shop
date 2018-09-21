@@ -1,29 +1,35 @@
 @extends('layouts.app')
 
 
-<div class="bg-image bg-parallax overlay" style="background-image:url(./img/home-background.jpg)"></div>
-  <br><br><br><br>
-<button>ddd</button>
-   <br><br><br><br>
+@section('content')
+<!-- Hero-area -->
+        <div class="hero-area section">
 
-    <div class="container" type="text" readonly>
+            <!-- Backgound Image -->
+            <div class="bg-image bg-parallax overlay" style="background-image:url(./img/page-background.jpg)"></div>
+            <!-- /Backgound Image -->
 
-      <div class="container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 text-center">
+                        <h1 class="white-text">Historial de Compras</h1>
 
+                    </div>
+                </div>
+            </div>
 
-    <div class="card">
-      <div class="card-header">
+        </div>
+        <!-- /Hero-area -->
+        <hr>
+        <hr>
+        <div class="container">
         
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Historial de Compras</h5>
-      </div>
           @if(isset($consulta) && count($consulta) > 0)
             <center>
               <table>
                 <tr>
-                <th> NAME &nbsp;&nbsp;&nbsp;</th>
-                <th> &nbsp; &nbsp; CANTIDAD &nbsp;</th>
+                <th><h2 class="black-text"> NAME &nbsp;&nbsp;&nbsp; </h2></th>
+                <th><h2 class="black-text"> &nbsp; &nbsp; CANTIDAD &nbsp;</h2></th>
                 </tr>
                 @foreach($consulta as $registro)
                 <tr>
@@ -34,14 +40,8 @@
               </table>
             </center>
           @endif
-       <BR><BR>
-    </div>
-  <BR><BR>
-</div>
 
-  @section('content')
-
-
-
+        </div>
+      </div>
 
 @endsection

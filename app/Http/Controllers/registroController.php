@@ -16,7 +16,7 @@ class registroController extends Controller
      */
     public function registr()
     {
-        return view('/registro');
+        return view('registro');
     }
 
     
@@ -36,7 +36,7 @@ class registroController extends Controller
             $r->updated_at="2018-08-15 23:35:55";
             $r->created_at="2018-08-15 23:35:55";
             $r->save();
-         return view('/registro');
+         return view('compra');
     }
 
 
@@ -47,12 +47,12 @@ class registroController extends Controller
      */
 
     public function historico(Request $request){
-        $escuela = $request->input('1');
+       
         $consulta = \DB::table('purchases as r')
         ->join('users as u','r.user_id','=','u.id')
         ->join('products as t', 'r.product_id', '=', 't.id')
         ->select('t.name as NAME','t.quantity as CANTIDAD')
-        ->where('r.user_id','=',$escuela)
+        ->where('r.user_id','=','1')
         ->get();
 
 
