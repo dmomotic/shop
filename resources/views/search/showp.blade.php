@@ -15,7 +15,7 @@
 <br>
 <br>
 
-	<section class="bg-dark text-white">
+  <section class="bg-dark text-white">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -30,27 +30,27 @@
         <div class="row">
           
           @forelse($products as $product)
-          	@if($product != null )
-	          <div class="col-lg-4 col-md-6 text-center">
-	            <div class="service-box mt-5 mx-auto">
-	              <i class="fa fa-4x fa-gift mb-3 sr-icons" style="color:navy" ></i>
+            @if($product != null )
+            <div class="col-lg-4 col-md-6 text-center">
+              <div class="service-box mt-5 mx-auto">
+                <i class="fa fa-4x fa-gift mb-3 sr-icons" style="color:navy" ></i>
                 <a href="{{ url('/ProductView/'.$product->id) }}">
-	              <p style="color:white; background: black;">{{ $product->name }}</p>
-	              </a>
-	            </div>
-	          </div>
-          	@endif
-          	
+                <p style="color:white; background: black;">{{ $product->name }}</p>
+                </a>
+              </div>
+            </div>
+            @endif
+            
           @empty
-	          <div class="col-lg-4 col-md-6 text-center">
-	            <div class="service-box mt-5 mx-auto">
-	            <i class="fa fa-spinner fa-spin fa-3x fa-fw" style="color:white"></i>
-	              <h3 class="mb-3">Sin resultados</h3>
-	              <p class="text-muted mb-0" style="color:white">
+            <div class="col-lg-4 col-md-6 text-center">
+              <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-spinner fa-spin fa-3x fa-fw" style="color:white"></i>
+                <h3 class="mb-3">Sin resultados</h3>
+                <p class="text-muted mb-0" style="color:white">
                 No existe un producto con el nombre ingresado.
                 </p>
-	            </div>
-	          </div>
+              </div>
+            </div>
           @endforelse
           
         </div>

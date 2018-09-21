@@ -10,12 +10,12 @@ class DasClientTest extends TestCase
 {
     /**
      * A basic test example.
-     *
+     * @test
      * @return void
      */
     public function testExample()
     {
-        $this->get('/DashoardClient')
+        $this->get('/Dash')
             ->assertStatus(200);
     }
 }
