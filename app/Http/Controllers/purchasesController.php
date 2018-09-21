@@ -31,6 +31,16 @@ class purchasesController extends Controller
     }
 
     public function ObtenerProducto(Request $request){
+        //Validaciones
+        $rules = [
+            'product_code' => 'required|numeric',           
+        ];
+        //Mensajes
+        $messages = [
+            'product_code.required' => 'Ingresa un codigo para buscar',
+            'product_code.numeric' => '¡Error! Se deben ingresar unicamente numeros para el codigo del producto.',
+        ];
+        $this->validate($request, $rules, $messages);
         $producto = $request->input('product_code');
         $cantidad = $request->input('product_cant');
     	$products = product::where('id', '=', $producto)->get();
