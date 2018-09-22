@@ -27,8 +27,8 @@
   					  <li class="list-group-item">{{$p->description}}</li>
   					  <li class="list-group-item">$ {{$p->price}}</li>
   					  <li class="list-group-item">
-				<a href="/" class="btn btn-primary">Regresar</a>
-    			<a href="/" class="btn btn-primary">Comprar</a>
+				<a href={{ URL::previous() }} class="btn btn-primary">Regresar</a>
+    			<a href="/compra" class="btn btn-primary">Comprar</a>
   					  </li>
   					</ul>
   				</div>		
@@ -45,7 +45,7 @@
   					  <li class="list-group-item">PRODUCTO NO ENCONTRADO</li>
   					  <li class="list-group-item">El producto no existe o no se encuentra disponible en este momento.</li>
   					  <li class="list-group-item">
-				<a href="/" class="btn btn-primary">Regresar</a>
+				<a href={{ URL::previous() }} class="btn btn-primary">Regresar</a>
   					  </li>
   					</ul>
   				</div>		
