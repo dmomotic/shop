@@ -38,7 +38,8 @@
           <div class="col-lg-4 col-md-4 text-center">
             <div class="service-box mt-5 mx-auto">
               
-              <a href="#search">
+              <a href="{{url('/historial',['id'=>Auth::user()->id]) }}">
+                
                 <i class="fa fa-cart-arrow-down fa-5x fa-lg"></i>
                 <br>
                 <br>
@@ -49,5 +50,5 @@
 
         </div>
       </div>
-
+@include('blocks.search')
 @endsection

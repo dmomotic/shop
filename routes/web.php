@@ -23,7 +23,7 @@ Route::get('/ProductView/{id}', 'Product_View_Controller@show');
 Route::get('/registro', 'registroController@registr');
 Route::post('/registro', 'registroController@saveData');
 
-Route::get('/historial', 'registroController@historico');
+Route::get('/historial/{id}', 'registroController@historico');
 
 Auth::routes();
 

@@ -46,13 +46,12 @@ class registroController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function historico(Request $request){
-       
+    public function historico($id){
         $consulta = \DB::table('purchases as r')
         ->join('users as u','r.user_id','=','u.id')
         ->join('products as t', 'r.product_id', '=', 't.id')
         ->select('t.name as NAME','t.quantity as CANTIDAD')
-        ->where('r.user_id','=','1')
+        ->where('r.user_id','=',$id)
         ->get();
 
 
