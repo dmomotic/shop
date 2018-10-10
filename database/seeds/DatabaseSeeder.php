@@ -17,6 +17,11 @@ class DatabaseSeeder extends Seeder
     	]);
     	factory(App\User::class, 19)->create();
 
+        //Insercion de producto para el paso de pruebas
+        factory(App\Product::class, 1)->create([
+            'name' => 'Cristian Keebler'
+        ]);
+        
         //Insercion de 30 productos
     	factory(App\Product::class, 30)->create();
 
