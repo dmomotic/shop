@@ -18,6 +18,7 @@
                 </div>
             </div>
 
+
         </div>
         <!-- /Hero-area -->
         <hr>
@@ -42,6 +43,7 @@
           @endif
 
         </div>
+        <a class="main-button" href="{{ url('/Dash') }}">Regresar</a>
       </div>
 
 @endsection

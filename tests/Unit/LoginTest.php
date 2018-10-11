@@ -48,7 +48,7 @@ class LoginTest extends TestCase
             'email' => 'customer1@mail.com',
             'password' => '123456',
         ]);
-        $response->assertRedirect('/');
+        $response->assertRedirect('/Dash');
     }
 
     /**
