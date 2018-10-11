@@ -59,7 +59,7 @@ class CompraTest extends TestCase
         $response = $this->json('GET',  '/compraproducto', ['product_code'=>'1','product_cant' => '1']);
         $response->assertViewIs('CompraProducto');
         $response->assertSee('Resultados de Compra');
-        $response->assertSee('Cristian Keebler');
+        $response->assertSee('Aliyah Reinger');
         $response->assertSuccessful();
     }
     

@@ -25,7 +25,7 @@ class historialTest extends TestCase
      */
 	public function verifica_ventana()
     {	
-    	$this->get('/historial')
+    	$this->get('/historial/1')
     		->assertStatus(200);
     }
 
