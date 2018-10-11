@@ -14,4 +14,4 @@ yarn-error.log
 .env.example
 .phpunit.result.cache
 /report
-/test/functional.suite.yml
+/tests/functional.suite.yml
