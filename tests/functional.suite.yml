@@ -13,5 +13,8 @@ modules:
             part: ORM
             environment_file: .env.testing
         - PhpBrowser:
-            url:  http://shop.test:8888
+          #esta es la de todos
+            #url:  http://shop.test:8888 
+          # de jossie
+            url: http://127.0.0.1:8000
         - \Helper\Functional
