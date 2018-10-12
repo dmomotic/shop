@@ -27,7 +27,7 @@ class purchasesController extends Controller
         $r->quantity= $request->input('cantidad');
         $r->payment= $request->input('precio');
         $r->save();
-        return back();
+        return view('/compra');
     }
 
     public function ObtenerProducto(Request $request){
