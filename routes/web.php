@@ -43,3 +43,5 @@ Route::post('/compraproducto', 'purchasesController@SavePurchase');
 Route::get('/Dash', 'ClientController@eva');
 
 Route::get('/search', 'ControllerForSearching@showResults');
+
+/*comentario prueba*/
