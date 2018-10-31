@@ -16,11 +16,9 @@ class PruebaRegistroCest
     	$I->fillField('password', '123465');
     	$I->fillField('tarjeta', 'eee');
     	//3. peticion post a la ruta del registro
-    	$I->click('Registrar');
+    	//$I->click('Registrar');
     	//4. se verifica que no haya respuesta de error
     	$I->seeResponseCodeIsSuccessful();
-
-    	
     }
 }
 

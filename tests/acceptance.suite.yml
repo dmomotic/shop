@@ -11,5 +11,5 @@ modules:
             part: ORM
             cleanup: false # can't wrap into transaction
         - PhpBrowser:
-            url: http://shop.test:8888/
+            url: http://127.0.0.1:8000/
         - \Helper\Acceptance

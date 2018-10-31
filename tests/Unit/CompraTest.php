@@ -56,10 +56,10 @@ class CompraTest extends TestCase
      */
     public function it_search_a_product_that_exits()
     {
-        $response = $this->json('GET',  '/compraproducto', ['product_code'=>'1','product_cant' => '1']);
+        $response = $this->json('GET',  '/compraproducto', ['product_code'=>'1','product_cant' => '355']);
         $response->assertViewIs('CompraProducto');
         $response->assertSee('Resultados de Compra');
-        $response->assertSee('Aliyah Reinger');
+        $response->assertSee('Cristian Keebler');
         $response->assertSuccessful();
     }
     
@@ -85,12 +85,12 @@ class CompraTest extends TestCase
     public function purchaseTest()
     {
 	   $this->json('POST','/compraproducto', [
-            'user_id' => '1',
-            'product_id' => '1',
-            'quantity' => '10',
-            'payment'=>'8767',
+            'user_id' => '15',
+            'product_id' => '31',
+            'quantity' => '9',
+            'payment'=>'2878.29',
         ]);
-	   $this->assertDatabaseHas('purchases', ['user_id' => '1']);
+	   $this->assertDatabaseHas('purchases', ['user_id' => '15']);
     }
 }
 
