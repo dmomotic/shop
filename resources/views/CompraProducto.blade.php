@@ -26,10 +26,13 @@
                   <h3 class="mb-3">{{ $product->name }}</h3>
                       ID Producto <input id="id1" type="number" name="id1" value="<?php echo $product->id ?>" />
                       <p class="text-muted mb-0">{{ $product->description }}</p>
+                      <!--linea de cupon-->
                       
+
                       <p> Precio Q <input id="precio" type="number" name="precio" value="<?php echo $product->price ?>" /></p>   
-                      <p> Cantidad <input id="cantiad" type="number" name="cantidad" value="<?php echo $cantidad ?>" /> 
-                    </p>
+                      <p> Cantidad <input id="cantiad" type="number" name="cantidad" value="<?php echo $cantidad ?>" /></p> 
+                       <p> Cupon <input id="cupon" type="text" name="cupon" value="<?php echo $cupon ?>" /> </p>  
+                   
                       <p> Confirmar ID usuario <input id="id" class="text-muted mb-0"  name="id" required autofocus> </p> 
 	              </a>
                 </div>
