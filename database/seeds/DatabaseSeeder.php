@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Coupon;
 
 class DatabaseSeeder extends Seeder
 {
@@ -27,5 +28,32 @@ class DatabaseSeeder extends Seeder
 
         //Insertando 20 compras
         factory(App\Purchase::class, 20)->create();
+
+        //Creacion de cupones para pruebas
+        Coupon::create([
+            'code' => 'Cupon01',
+            'amount' => '15.0'
+        ]);
+
+        Coupon::create([
+            'code' => 'Cupon02',
+            'amount' => '10.0'
+        ]);
+
+        Coupon::create([
+            'code' => 'Cupon03',
+            'amount' => '5.0'
+        ]);
+
+        Coupon::create([
+            'code' => 'Cupon04',
+            'amount' => '20.0'
+        ]);
+
+        Coupon::create([
+            'code' => 'Cupon05',
+            'amount' => '8.0'
+        ]);
+
     }
 }
