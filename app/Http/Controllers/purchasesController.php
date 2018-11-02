@@ -34,15 +34,21 @@ class purchasesController extends Controller
             //CUPON NO ENCONTRADO O VALIDO
             $c = 0;
             $total = ($request->input('precio') - $c) * $r->quantity;
+            //$message= 'CUPON NO ENCONTRADO, SE PAGO LA TOTALIDAD';
+            $r->payment= $total;
+            $r->save();
+            return redirect('/compra')->with('status', 'CUPON NO ENCONTRADO, SE PAGO LA TOTALIDAD');
             //echo $total;               
             }else{
             //CUPON ENCONTRADO
             $total = ($request->input('precio') - $c->amount) * $r->quantity;
             //echo $total;
+            //$message= 'COMPRA EXITOSA';
+            $r->payment= $total;
+            $r->save();
+            return redirect('/compra')->with('status', 'COMPRA EXITOSA');
             }
-        $r->payment= $total;
-        $r->save();
-        return view('/compra');
+        
     }
 
     public function ObtenerProducto(Request $request){

@@ -25,6 +25,11 @@
                         @else
                             <p class="lead white-text">Bienvenido {{ Auth::user()->name }}, encuentra los mejores productos en nuestra tienda virtual.</p>
                         @endguest
+                        @if (session('status'))
+                        <div class="alert alert-success">
+                        {{ session('status') }}
+                         </div>
+                        @endif
                         <a class="main-button icon-button" href="#">Quiero comprar!</a>
                     </div>
                 </div>

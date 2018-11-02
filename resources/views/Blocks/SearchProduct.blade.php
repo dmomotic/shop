@@ -2,6 +2,13 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 mx-auto text-center">
+         <div class="container" >
+        @if(session('status'))
+          <div class="alert alert-secondary" role="alert">
+            {{ session('status') }}
+          </div>
+        @endif
+      </div>
         <h2 text-align="center">Comprar un Producto</h2>
         <hr class="light my-4">
         <p class="text-faded mb-4">Ingrese Codigo Producto a Comprar</p>

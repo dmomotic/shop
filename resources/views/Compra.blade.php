@@ -15,6 +15,7 @@
                     <div class="col-md-8">
                         <h1 class="white-text">Tienda en linea</h1>
                         <p class="lead white-text">Encuentra los mejores productos en nuestra tienda virtual.</p>
+                       
                         <a class="main-button icon-button" href="#SearchProduct">¡Quiero comprar!</a>
                     </div>
                 </div>
